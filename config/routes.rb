@@ -4,10 +4,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :users
-      post 'auth/login/', to: 'authentication#login'
+      resources :doctors, only: [:index]
+      
     end
   end
+  # resources :users
+  #     post 'auth/login/', to: 'authentication#login'
 end

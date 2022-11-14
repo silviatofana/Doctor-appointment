@@ -45,11 +45,15 @@ Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:
   AllowForAlignment: false
+Layout/EndOfLine:
+   Enabled: false
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
 Lint/RaiseException:
   Enabled: false
+Lint/DuplicateBranch:
+   Enabled: false
 Lint/StructNewOverride:
   Enabled: false
 Style/HashEachMethods:
