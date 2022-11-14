@@ -5,14 +5,11 @@ class Api::V1::DoctorsController < ApplicationController
     render json: @doctors
   end
 
-
   def show
     render json: @doctor, status: :ok
-  end  
-
+  end
 
   def update
-   
     if @doctor.update(doctor_params)
       render json: { data: 'Doctor Updated Successfully', status: :ok }
     else
@@ -27,8 +24,6 @@ class Api::V1::DoctorsController < ApplicationController
       render json: { data: 'Something went wrong', status: 'failed' }
     end
   end
-  
-  
 
   def create
     @doctor = Doctor.new(doctor_params)
@@ -37,15 +32,15 @@ class Api::V1::DoctorsController < ApplicationController
     else
       render json: { data: @doctor.errors.full_messages, status: 'failed' }, status: :unprocessable_entity
     end
-  
   end
 
-  private 
+  private
+
   def set_doctor
     @doctor = Doctor.find(params[:id])
   end
 
-def doctor_params
-  params.require(:doctor).permit(:name, :bio, :specialization, :avaliability, :photo)
-end
+  def doctor_params
+    params.require(:doctor).permit(:name, :bio, :specialization, :avaliability, :photo)
+  end
 end
