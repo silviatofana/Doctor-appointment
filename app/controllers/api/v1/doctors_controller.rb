@@ -17,8 +17,8 @@ class Api::V1::DoctorsController < ApplicationController
   
 
   def create
-    dog = Doctor.create(doctor_params)
-    render json: dog
+    doctor = Doctor.create(doctor_params)
+    render json: doctor
   end
 
   private 
