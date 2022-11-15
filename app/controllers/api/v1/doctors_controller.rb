@@ -13,17 +13,15 @@ class Api::V1::DoctorsController < ApplicationController
   def destroy
     Doctor.destroy(params[:id])
   end
-  
-  
 
   def create
     doctor = Doctor.create(doctor_params)
     render json: doctor
   end
 
-  private 
+  private
 
-def doctor_params
-  params.require(:doctor).permit(:name, :bio, :specialization, :avaliability, :photo)
-end
+  def doctor_params
+    params.require(:doctor).permit(:name, :bio, :specialization, :avaliability, :photo)
+  end
 end
