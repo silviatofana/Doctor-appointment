@@ -19,9 +19,9 @@ class Api::V1::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      render json: { user: @user, status: :created, message: 'Registration was successful' }
+      render json: { user: @user, status: :created, message: 'Registration was successful', success: true }
     else
-      render json: { user: @user.errors, status: :unprocessable_entity, message: 'Registration was not successful' }
+      render json: { user: @user.errors, status: :unprocessable_entity, message: 'Registration was not successful', success: false }
     end
   end
 
