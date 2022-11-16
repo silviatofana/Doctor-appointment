@@ -21,7 +21,8 @@ class Api::V1::UsersController < ApplicationController
     if @user.save
       render json: { user: @user, status: :created, message: 'Registration was successful', success: true }
     else
-      render json: { user: @user.errors, status: :unprocessable_entity, message: 'Registration was not successful', success: false }
+      render json: { user: @user.errors, status: :unprocessable_entity, message: 'Registration was not successful',
+                     success: false }
     end
   end
 
