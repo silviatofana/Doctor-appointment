@@ -18,7 +18,7 @@ class Api::V1::AppointmentsController < ApplicationController
     @appointment = Appointment.new(appointment_params)
 
     if @appointment.save
-      render json: @appointment, status: :created, location: @appointment
+      render json: @appointment, status: :created
     else
       render json: @appointment.errors, status: :unprocessable_entity
     end
@@ -36,6 +36,7 @@ class Api::V1::AppointmentsController < ApplicationController
   # DELETE /appointments/1
   def destroy
     @appointment.destroy
+    render json: { 'message' => 'Deleted successfully'}
   end
 
   private
