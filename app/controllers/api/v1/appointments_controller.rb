@@ -1,9 +1,10 @@
 class Api::V1::AppointmentsController < ApplicationController
   before_action :set_appointment, only: %i[show update destroy]
+  before_action :authorize_request, only: %i[index destroy create update]
 
   # GET /appointments
   def index
-    @appointments = Appointment.all
+    @appointments = current_user.appointments
 
     render json: @appointments
   end
@@ -18,9 +19,9 @@ class Api::V1::AppointmentsController < ApplicationController
     @appointment = Appointment.new(appointment_params)
 
     if @appointment.save
-      render json: @appointment, status: :created, location: @appointment
+      render json: @appointment, status: :created, message: 'Appointment created successfully'
     else
-      render json: @appointment.errors, status: :unprocessable_entity
+      render json: @appointment.errors, status: :unprocessable_entity, message: 'Appointment not created'
     end
   end
 
