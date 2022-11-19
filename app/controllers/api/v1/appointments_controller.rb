@@ -37,6 +37,7 @@ class Api::V1::AppointmentsController < ApplicationController
   # DELETE /appointments/1
   def destroy
     @appointment.destroy
+    render json: { 'message' => 'Deleted successfully'}
   end
 
   private
