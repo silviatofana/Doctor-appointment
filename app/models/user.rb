@@ -11,6 +11,7 @@ class User < ApplicationRecord
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
   def default_values
+    self.role = 'normal' if self.role == nil
     self.photo = 'profilephoto.png'
   end
 end
