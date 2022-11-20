@@ -10,5 +10,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
-  def default_values; end
+  def default_values
+    self.photo = 'profilephoto.png'
+  end
 end
