@@ -12,7 +12,7 @@ class Api::V1::DoctorsController < ApplicationController
   end
 
   def update
-    if current_user.role === 'admin' && @doctor.update(doctor_params)
+    if current_user.role == 'admin' && @doctor.update(doctor_params)
       render json: { data: 'Doctor Updated Successfully', status: :ok }
     else
       render json: { data: 'Something went wrong', status: 'failed' }
@@ -20,7 +20,7 @@ class Api::V1::DoctorsController < ApplicationController
   end
 
   def destroy
-    if current_user.role === 'admin' && @doctor.destroy
+    if current_user.role == 'admin' && @doctor.destroy
       render json: { data: 'Doctor Deleted Successfully', status: :ok }
     else
       render json: { data: 'Something went wrong', status: 'failed' }
@@ -29,7 +29,7 @@ class Api::V1::DoctorsController < ApplicationController
 
   def create
     @doctor = Doctor.new(doctor_params)
-    if current_user.role === 'admin' && @doctor.save
+    if current_user.role == 'admin' && @doctor.save
       render json: { data: 'Doctor Created Successfully', status: :ok }
     else
       render json: { data: @doctor.errors.full_messages, status: 'failed' }, status: :unprocessable_entity
