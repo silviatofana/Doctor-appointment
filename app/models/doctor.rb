@@ -7,11 +7,12 @@ class Doctor < ApplicationRecord
   validates :specialization, presence: true
 
   def default_values
+    return photo unless photo.nil?
+
     self.photo = if gender == 'M' || gender == 'Male'
                    'male-placeholder.png'
                  else
                    'female-placeholder.png'
                  end
-    photo
   end
 end
