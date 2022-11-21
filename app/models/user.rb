@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :appointments
+  has_many :appointments, dependent: :destroy
   has_many :doctors, through: :appointments
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -10,5 +10,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
-  def default_values; end
+  def default_values
+    self.role = 'normal' if role.nil?
+    self.photo = 'profilephoto.png'
+  end
 end
