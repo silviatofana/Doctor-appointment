@@ -23,5 +23,10 @@ RSpec.describe Doctor, type: :model do
         subject.specialization = nil
         expect(subject).to_not be_valid
       end
+
+      it 'Gender should be present' do
+        subject.gender = nil
+        expect(subject).to_not be_valid
+      end
   end
 end
