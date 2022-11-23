@@ -32,7 +32,17 @@ RSpec.describe 'Doctors', type: %w[request feature] do
     expect(JSON.parse(response.body)['specialization']).to eq('Oncologist')
   end
 
+  it 'updates a doctor' do
+    new_doctor = { doctor: { name: 'Felix Ouma', specialization: 'Optician', picture: 'http://localhost/pic.png' } }
+    put "/api/v1/doctors/#{@doctor.id}", params: new_doctor, headers: { Authorization: @token }
+    expect(response.status).to eq(200)
+    expect(JSON.parse(response.body)['name']).to eq('Felix Ouma')
+    expect(JSON.parse(response.body)['specialization']).to eq('Optician')
+  end
+
   
+
+
 
   
 end
