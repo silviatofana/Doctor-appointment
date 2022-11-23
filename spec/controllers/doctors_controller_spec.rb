@@ -18,10 +18,21 @@ RSpec.describe 'Doctors', type: %w[request feature] do
 
     @doctor = Doctor.all.last
   end
+
     it 'renders the doctors list' do
         get '/api/v1/doctors/'
         expect(response.status).to eq(200)
         expect(JSON.parse(response.body).size).to eq(1)
   end
+
+  it 'renders the requested doctor' do
+    get "/api/v1/doctors/#{@doctor.id}"
+    expect(response.status).to eq(200)
+    expect(JSON.parse(response.body)['name']).to eq('Solo Boss')
+    expect(JSON.parse(response.body)['specialization']).to eq('Oncologist')
+  end
+
+  
+
   
 end
