@@ -14,8 +14,13 @@ RSpec.describe Doctor, type: :model do
         expect(subject).to be_valid
       end
    
-      it 'Name should be present' do
+    it 'Name should be present' do
         subject.name = nil
+        expect(subject).to_not be_valid
+      end
+    
+     it 'Specialization should be present' do
+        subject.specialization = nil
         expect(subject).to_not be_valid
       end
   end
