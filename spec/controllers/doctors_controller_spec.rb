@@ -19,9 +19,9 @@ RSpec.describe 'Doctors', type: %w[request feature] do
     @doctor = Doctor.all.last
   end
 
-    it 'renders the doctors list' do
-        get '/api/v1/doctors/'
-        expect(response.status).to eq(200)
-        expect(JSON.parse(response.body).size).to eq(0)
+  it 'renders the doctors list' do
+    get '/api/v1/doctors/'
+    expect(response.status).to eq(200)
+    expect(JSON.parse(response.body).size).to eq(0)
   end
 end
