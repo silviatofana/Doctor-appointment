@@ -40,9 +40,9 @@ RSpec.describe 'Doctors', type: %w[request feature] do
     expect(JSON.parse(response.body)['specialization']).to eq('Optician')
   end
 
-  
-
-
-
-  
+  it 'deletes the requested doctor' do
+    delete "/api/v1/doctors/#{@doctor.id}", headers: { Authorization: @token }
+    expect(response.status).to eq(200)
+    expect(JSON.parse(response.body).size).to eq(0)
+  end  
 end
