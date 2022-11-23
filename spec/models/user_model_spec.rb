@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   subject do
-    User.create(name: 'Felix Okinyo', password: '123456', password_confirmation: '123456', email: 'felixoo@gmail.com', role: 'admin', gender: 'M')
+    User.create(name: 'Felix Okinyo', password: '123456', password_confirmation: '123456', email: 'felixoo@gmail.com',
+                role: 'admin', gender: 'M')
   end
 
   before { subject.save }
