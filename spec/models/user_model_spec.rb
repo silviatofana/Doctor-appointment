@@ -28,7 +28,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'Password confirmation should be same as password' do
-      expect(subject.password).to be eq(subject.password_confirmation)
+      expect(subject.password).to eq(subject.password_confirmation)
     end
   end
 end
