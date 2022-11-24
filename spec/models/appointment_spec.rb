@@ -30,6 +30,11 @@ RSpec.describe Appointment, type: :model do
             subject.time_of_appointment = nil
             expect(subject).to_not be_valid
           end
+
+          it 'Appointment_user should be present' do
+            subject.user_id = nil
+            expect(subject).to_not be_valid
+          end
     end
 
     
