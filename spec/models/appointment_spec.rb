@@ -15,9 +15,14 @@ RSpec.describe Appointment, type: :model do
         it 'Appointment should be valid' do
           expect(subject).to be_valid
         end
-        
+
         it 'Description should be present' do
             subject.description = nil
+            expect(subject).to_not be_valid
+          end
+
+          it 'Appointment_dates should be present' do
+            subject.date_of_appointment = nil
             expect(subject).to_not be_valid
           end
     end
