@@ -29,6 +29,7 @@ gem 'devise'
 
 # Add jwt gem
 gem 'jwt'
+gem 'rswag'
 
 # Add rspec-rails
 gem 'rspec-rails'
