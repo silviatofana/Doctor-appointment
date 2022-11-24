@@ -35,6 +35,11 @@ RSpec.describe Appointment, type: :model do
             subject.user_id = nil
             expect(subject).to_not be_valid
           end
+
+          it 'Appointment_doctor should be present' do
+            subject.doctor_id = nil
+            expect(subject).to_not be_valid
+          end
     end
 
     
