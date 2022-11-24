@@ -10,4 +10,10 @@ RSpec.describe Appointment, type: :model do
       end
 
       before { subject.save }
+
+      context 'Test for validation : ' do
+        it 'Appointment should be valid' do
+          expect(subject).to be_valid
+        end
+    end
 end
