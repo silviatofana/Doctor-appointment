@@ -7,7 +7,9 @@
 ## Front-end Repository
 | Repository | Pull request |
 |------------|------------|
-|[Repo link >>](https://github.com/FelixOuma/Doctor-appointment_frontend)|[Pull request Here >>](https://github.com/FelixOuma/Doctor-appointment_frontend/pulls/)|
+|[Repo link >>](https://github.com/Felix45/Doctor-Appointment-Front-end)|[Pull request Here >>](https://github.com/Felix45/Doctor-Appointment-Front-end)|
+
+## Team members: @felix45, @henrycode460, @silviatofana
 
 
 ## Built With
@@ -76,6 +78,12 @@ rspec
 - GitHub: [@Felix45](https://github.com/Felix45)
 - Twitter: [@Felix_Atonoh](https://twitter.com/Felix_Atonoh)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/felix-ouma/)
+
+👤 **Henry V. Singhbeh**
+
+- GitHub: [@henrycode460](https://github.com/henrycode460)
+- Twitter: [@460code](https://twitter.com/460code)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/henry-varflay-singbeh-75707b229/)
 
 
 ## 🤝 Contributing
