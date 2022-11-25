@@ -7,6 +7,14 @@ paths:
   "/api/v1/users":
     get:
       summary: list users
+      parameters:
+      - in: header
+        type: string
+        name: Authorization
+        required: true
+        description: Client token
+      security:
+      - Authorization: {}
       responses:
         '401':
           description: successful
@@ -49,13 +57,72 @@ paths:
       type: string
       description: id
       required: true
+    - in: header
+      type: string
+      name: Authorization
+      required: true
+      description: Client token
     get:
       summary: show user
       responses:
         '401':
           description: successful
+    put:
+      summary: update user
+      consumes:
+      - application/json
+      security:
+      - Authorization: {}
+      parameters:
+      - name: user
+        in: body
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+            email:
+              type: string
+            role:
+              type: string
+            gender:
+              type: string
+          required:
+          - name
+          - gender
+          - email
+          - role
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete user
+      responses:
+        '401':
+          description: successful
+  "/api/v1/auth/login":
+    post:
+      summary: login user
+      consumes:
+      - application/json
+      parameters:
+      - name: user
+        in: body
+        schema:
+          type: object
+          properties:
+            email:
+              type: string
+            password:
+              type: string
+          required:
+          - email
+          - password
+      responses:
+        '200':
+          description: successful
 servers:
-- url: https://{defaultHost}
+- url: http://{defaultHost}
   variables:
     defaultHost:
       default: 127.0.0.1:3000
