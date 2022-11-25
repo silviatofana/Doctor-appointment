@@ -7,7 +7,7 @@
 ## Front-end Repository
 | Repository | Pull request |
 |------------|------------|
-|[Repo link >>](https://github.com/Felix45/Doctor-Appointment-Front-end)|[Pull request Here >>](https://github.com/Felix45/Doctor-Appointment-Front-end)|
+|[Repo link >>](https://github.com/Felix45/Doctor-Appointment-Front-end)|[Pull request Here >>](https://github.com/Felix45/Doctor-Appointment-Front-end/pull/14)|
 
 ## Team members: @felix45, @henrycode460, @silviatofana
 
