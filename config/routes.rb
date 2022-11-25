@@ -12,7 +12,7 @@ Rails.application.routes.draw do
         resources :appointments
       end
       post 'auth/login/', to: 'authentication#login'
-      resources :doctors, only: [:create, :index, :update, :destroy]
+      resources :doctors, only: [:create, :index, :update, :destroy, :show]
     end
   end 
 end
