@@ -17,10 +17,7 @@
 - Technologies: Git, Gitflow, Linters, Github, PostgreSql, Rubocop
 
 ## Live Demo 
-> The live demo 
-
-
-
+> The live demo [](http://finalcapstonedoctorappointment.herokuapp.com/api-docs/index.html)
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
@@ -91,3 +88,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hats off to the whole microverse community
+
+## License 
+
+This project is [MIT](MIT.md) licensed.
