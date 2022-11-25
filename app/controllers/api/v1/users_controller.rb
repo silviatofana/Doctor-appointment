@@ -38,6 +38,7 @@ class Api::V1::UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     @user.destroy
+    render json: { message: 'User was successfully deleted', success: true }
   end
 
   private
