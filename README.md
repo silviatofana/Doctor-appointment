@@ -2,12 +2,12 @@
 
 # Doctors Appointment Backend
 
-> This web application is the API that serves as the backend to the [Doctor-appointment_frontend](https://github.com/FelixOuma/Doctor-appointment_frontend)
+> This web application is the API that serves as the backend to the [Doctor-appointment_frontend](https://github.com/Felix45/Doctor-Appointment-Front-end)
 
 ## Front-end Repository
 | Repository | Pull request |
 |------------|------------|
-|[Repo link >>](https://github.com/FelixOuma/Doctor-appointment_frontend)|[Pull request Here >>](https://github.com/FelixOuma/Doctor-appointment_frontend/pull/)|
+|[Repo link >>](https://github.com/FelixOuma/Doctor-appointment_frontend)|[Pull request Here >>](https://github.com/FelixOuma/Doctor-appointment_frontend/pulls/)|
 
 
 ## Built With
