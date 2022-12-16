@@ -11,7 +11,6 @@
 
 ## Team members: @felix45, @henrycode460, @silviatofana
 
-
 ## Built With
 
 - Major: Ruby
